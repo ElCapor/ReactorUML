@@ -1,0 +1,8 @@
+[<start>]->[Reactor]
+[Reactor] +- [Physics]
+[Reactor] +- [Gates]
+[Reactor] +- [<instance>Instances]
+[Physics] +- [Engine]
+[Instances] +- [Booleans]
+[Booleans] +- [<state>True]
+[Booleans] +- [<state>False]
