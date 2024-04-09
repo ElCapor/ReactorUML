@@ -30,7 +30,19 @@ generateRandom | Generate a random number following
 Mass Distribution within an interval with
 a specific resolution
 ]
-[Physics] -> [Engine]
+
+[Physics] -> [Engine||
+setEngineClass() |
+addConstant(Constant)|
+removeConstant() |
+setParams(Params, Math) |
+bindModules(ModulesFolder) |
+startSimulation() |
+stopSimulation() |
+
+
+
+]
 [Instances] +- [Booleans]
 [Booleans] +- [<state>True]
 [Booleans] +- [<state>False]
