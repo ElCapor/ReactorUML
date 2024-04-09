@@ -2,10 +2,29 @@
 [Reactor] +- [Physics]
 [Reactor] +- [Gates]
 [Reactor] +- [<instance>Instances]
-[Physics] +- [<table> Methods |
+[Physics] -> [<table> Physics Methods |
 newEngine(Engine, Constants, Params) | Create a new Engine
 ]
 [Physics] +- [Math]
+[Math] -> [<table> Math Methods |
+newIntegration | returns a new Integration object
+]
+
+[Math Methods] -> [Integration]
+[Integration] -> [<table> Integration Methods |
+newMonteCarlo | returns a MonteCarlo Object ||
+CDFIntegration | performs a cdf integration in the given
+interval within the provided resolution]
+[Math Methods] -> [MonteCarlo]
+[MonteCarlo] -> [<table>MonteCarlo Methods|
+newPoint | Create a new point between
+the given interval ||
+meanValue | returns the mean value of the current
+simulation ||
+integralEstimation | estimates the value of the integral
+in the given interval
+]
+
 [Physics] +- [Engine]
 [Instances] +- [Booleans]
 [Booleans] +- [<state>True]
