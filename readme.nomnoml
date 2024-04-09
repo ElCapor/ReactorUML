@@ -9,7 +9,7 @@ newEngine(Engine, Constants, Params) | Create a new Engine
 [Math] -> [<table> Math Methods |
 newIntegration | returns a new Integration object
 ]
-
+[Math Methods] -> [Boundary Conditions]
 [Math Methods] -> [Integration]
 [Integration] -> [<table> Integration Methods |
 newMonteCarlo | returns a MonteCarlo Object ||
@@ -24,8 +24,13 @@ simulation ||
 integralEstimation | estimates the value of the integral
 in the given interval
 ]
-
-[Physics] +- [Engine]
+[Math Methods] -> [Generating Functions]
+[Generating Functions] -> [<table>Generating Functions Methods |
+generateRandom | Generate a random number following
+Mass Distribution within an interval with
+a specific resolution
+]
+[Physics] -> [Engine]
 [Instances] +- [Booleans]
 [Booleans] +- [<state>True]
 [Booleans] +- [<state>False]
