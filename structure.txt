@@ -2,6 +2,10 @@
 [Reactor] +- [Physics]
 [Reactor] +- [Gates]
 [Reactor] +- [<instance>Instances]
+[Physics] +- [<table> Methods |
+newEngine(Engine, Constants, Params) | Create a new Engine
+]
+[Physics] +- [Math]
 [Physics] +- [Engine]
 [Instances] +- [Booleans]
 [Booleans] +- [<state>True]
