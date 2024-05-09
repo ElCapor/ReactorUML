@@ -1,7 +1,15 @@
+#direction: right
+#title: Pls kill me rn
+#zoom: 1
+#padding: 10
+#edges: rounded
+#ranker: longest-path
+
 [<start>]->[Reactor]
-[Reactor] +- [Physics]
 [Reactor] +- [Gates]
 [Reactor] +- [<instance>Instances]
+[Reactor] +- [Physics]
+
 [Physics] -> [<table> Physics Methods |
 newEngine(Engine, Constants, Params) | Create a new Engine
 ]
@@ -39,10 +47,46 @@ setParams(Params, Math) |
 bindModules(ModulesFolder) |
 startSimulation() |
 stopSimulation() |
-
-
-
+throttleSimulation() |
+Step : deltaTime |
+[Modules] ->1[atomicStuff||calculateAtomicDensity()]
+[Modules] ->2[chainReaction||fiveFactorsFormula()] -> [thermalutilizationFactor() ||
+reproductionFactor() ||
+antitrapFactor() ||
+fastfissionFactor() ||
+nonleakageProbability()]
+[Modules] ->3 [diffusionTheory]
+[Modules] ->3 [energyDistribution ||
+neutronEnergyDistribution()] ->
+[neutronCSDistribution()||
+captureCS() || 
+effectiveIntegralU238() || 
+dopplerBroadening()
 ]
-[Instances] +- [Booleans]
-[Booleans] +- [<state>True]
-[Booleans] +- [<state>False]
+[Modules] ->4 [fuelBurnup] ->
+[Poisoning() ||
+Samarium_Concentration() ||
+Promethium_Concentration() ||
+Xenon_Concentration() ||
+Iodine_Concentration()
+]
+[fuelBurnup] -> [Reactivity_Feedback() ||
+Pertubation_Theory_Reactivity_Coefficient_Samarium() ||
+Pertubation_Theory_Reactivity_Coefficient_Xenon()
+]
+[Modules] ->4 [reactorDynamics] ->	
+[reactivityPeriod() || 
+reactorReactivity() ||
+reactorPeriod() ||
+reactorlogPeriod()
+]
+[reactorDynamics] -> [Neutron_Population()||
+generalNeutronSolutionODG() ||
+generalPrecursorSolutionODG()
+]
+[reactorDynamics] -> [reactivityFeedback()] -> [temperatureAffectReactivity()||
+dopplerEffect() ||
+immediateDTC() ||
+startupTDC()
+]
+]
